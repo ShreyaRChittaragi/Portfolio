@@ -181,15 +181,23 @@
             max-width: 550px;
             line-height: 1.7;
         }
-        .profile-img {
-            width: 100%;
-            max-width: 380px;
-            border-radius: 40px;
-            box-shadow: var(--shadow-lg);
-            border: 4px solid white;
-            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            filter: grayscale(10%);
-        }
+        /* Find the .profile-img class and replace with these styles */
+.profile-img {
+    width: 100%;
+    max-width: 280px;  /* Changed from 380px to 280px */
+    border-radius: 32px;
+    box-shadow: var(--shadow-lg);
+    border: 4px solid white;
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    filter: grayscale(10%);
+}
+
+/* Also update responsive styles */
+@media (max-width: 768px) {
+    .profile-img { 
+        max-width: 220px;  /* Even smaller on mobile */
+    }
+}
         .profile-img:hover {
             transform: scale(1.03) rotate(1deg);
             box-shadow: var(--shadow-hover);
@@ -503,7 +511,6 @@
             .hero h1 { font-size: 2.8rem; }
             .hero-subtitle { font-size: 1.2rem; }
             .section-header h2 { font-size: 2rem; }
-            .profile-img { max-width: 280px; }
         }
     </style>
 </head>
